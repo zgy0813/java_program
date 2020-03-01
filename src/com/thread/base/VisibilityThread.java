@@ -1,4 +1,4 @@
-package com.thread;
+package com.thread.base;
 
 /**
  * 内存可见性

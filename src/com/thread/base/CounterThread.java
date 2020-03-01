@@ -1,4 +1,4 @@
-package com.thread;
+package com.thread.base;
 
 /**
  * 竞争条件

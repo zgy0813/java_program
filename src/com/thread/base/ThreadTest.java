@@ -1,4 +1,4 @@
-package com.thread;
+package com.thread.base;
 
 /**
  * 继承Thread并重写run方法实现一个线程
