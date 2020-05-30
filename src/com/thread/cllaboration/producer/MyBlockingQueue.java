@@ -13,7 +13,7 @@ public class MyBlockingQueue<E> {
     }
 
     public synchronized void put(E e) throws InterruptedException {
-        while(queue.size() == limit) {
+        while (queue.size() == limit) {
             wait();
         }
         queue.add(e);
@@ -21,7 +21,7 @@ public class MyBlockingQueue<E> {
     }
 
     public synchronized E take() throws InterruptedException {
-        while(queue.isEmpty()) {
+        while (queue.isEmpty()) {
             wait();
         }
         E e = queue.poll();

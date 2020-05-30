@@ -3,6 +3,7 @@ package com.thread.cllaboration.asynchronous;
 public class MyExecutor {
     /**
      * 这个子线程执行实际的子线程，记录执行结果到result变量，异常到exception变量，执行结束后设置共享状态变量done为true，并调用notifyAll，以唤醒可能在等待结果的主线程
+     *
      * @param <V>
      */
     static class ExecuteThread<V> extends Thread {
@@ -46,6 +47,7 @@ public class MyExecutor {
 
     /**
      * execute启动一个线程，并返回MyFuture对象，MyFuture的get方法会堵塞等待直到线程运行结束
+     *
      * @param task
      * @param <V>
      * @return

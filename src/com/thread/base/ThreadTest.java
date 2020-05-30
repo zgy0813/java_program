@@ -3,7 +3,7 @@ package com.thread.base;
 /**
  * 继承Thread并重写run方法实现一个线程
  */
-public class ThreadTest extends Thread{
+public class ThreadTest extends Thread {
     @Override
     public void run() {
         // 每个Thread都有一个id和name，可以判断在哪个线程中执行的

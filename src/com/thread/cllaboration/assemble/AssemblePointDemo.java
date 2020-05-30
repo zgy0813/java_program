@@ -12,12 +12,13 @@ public class AssemblePointDemo {
         public void run() {
             try {
                 // 模拟先各自独立运行
-                Thread.sleep((int)(Math.random() * 1000));
+                Thread.sleep((int) (Math.random() * 1000));
                 // 集合
                 ap.await();
                 System.out.println("arrived");
                 // 集合后执行其他操作
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+            }
         }
     }
 

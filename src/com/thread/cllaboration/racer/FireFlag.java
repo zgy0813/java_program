@@ -2,6 +2,7 @@ package com.thread.cllaboration.racer;
 
 public class FireFlag {
     private volatile boolean fired = false;
+
     public synchronized void waitForFire() throws InterruptedException {
         while (!fired) {
             wait();

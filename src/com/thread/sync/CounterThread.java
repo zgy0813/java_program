@@ -1,14 +1,15 @@
 package com.thread.sync;
 
-public class CounterThread extends Thread{
+public class CounterThread extends Thread {
     Counter counter;
+
     public CounterThread(Counter counter) {
         this.counter = counter;
     }
 
     @Override
     public void run() {
-        for (int i = 0; i < 1000 ; i++) {
+        for (int i = 0; i < 1000; i++) {
             counter.incr();
         }
     }

@@ -22,7 +22,7 @@ public class Asynchronous {
         // 执行其他操作
         try {
             // 获取异步调用的结果
-            Integer result= future.get();
+            Integer result = future.get();
             System.out.println(result);
         } catch (Exception e) {
             e.printStackTrace();

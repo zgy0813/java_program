@@ -2,15 +2,17 @@ package com.thread.base;
 
 /**
  * 竞争条件
+ *
  * @author zgy
  */
-public class CounterThread extends Thread{
+public class CounterThread extends Thread {
     private static int counter = 0;
+
     @Override
     public void run() {
         int max = 1000;
         for (int i = 0; i < max; i++) {
-            counter ++;
+            counter++;
         }
     }
 

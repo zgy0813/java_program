@@ -12,7 +12,7 @@ public class Producer extends Thread {
     public void run() {
         int num = 0;
         try {
-            while(true) {
+            while (true) {
                 String task = String.valueOf(num);
                 queue.put(task);
                 System.out.println("producer task " + task);

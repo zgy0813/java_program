@@ -3,13 +3,13 @@ package com.thread.base;
 /**
  * 内存可见性
  */
-public class VisibilityThread{
+public class VisibilityThread {
     private static boolean shutdown = false;
 
     static class HelloThread extends Thread {
         @Override
         public void run() {
-            while(!shutdown) {
+            while (!shutdown) {
                 // do nothing
             }
             System.out.println("exit hello");

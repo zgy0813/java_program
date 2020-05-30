@@ -8,16 +8,19 @@ import java.util.List;
  */
 public class ShareMemoryDemo {
     private static int shared = 0;
+
     private static void incrShared() {
-        shared ++;
+        shared++;
     }
 
     // 静态内部类
     static class ChildThread extends Thread {
         List<String> list;
+
         public ChildThread(List<String> list) {
             this.list = list;
         }
+
         @Override
         public void run() {
             incrShared();

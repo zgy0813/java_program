@@ -10,7 +10,7 @@ public class IteratorSyncDemo {
             @Override
             public void run() {
                 for (int i = 0; i < 100; i++) {
-                    list.add("item " +i);
+                    list.add("item " + i);
                     try {
                         Thread.sleep((int) (Math.random() * 10));
                     } catch (InterruptedException e) {

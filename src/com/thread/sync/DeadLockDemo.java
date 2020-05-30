@@ -9,6 +9,7 @@ import java.util.Collection;
 public class DeadLockDemo {
     private static Object lockA = new Object();
     private static Object lockB = new Object();
+
     private static void startThreadA() {
         Thread aThread = new Thread() {
             @Override
@@ -16,13 +17,16 @@ public class DeadLockDemo {
                 synchronized (lockA) {
                     try {
                         Thread.sleep(1000);
-                    } catch (InterruptedException e) {}
-                    synchronized (lockB) { }
+                    } catch (InterruptedException e) {
+                    }
+                    synchronized (lockB) {
+                    }
                 }
             }
         };
         aThread.start();
     }
+
     private static void startThreadB() {
         Thread bThread = new Thread() {
             @Override
@@ -30,8 +34,10 @@ public class DeadLockDemo {
                 synchronized (lockB) {
                     try {
                         Thread.sleep(1000);
-                    } catch (InterruptedException e) {}
-                    synchronized (lockA) { }
+                    } catch (InterruptedException e) {
+                    }
+                    synchronized (lockA) {
+                    }
                 }
             }
         };

@@ -2,9 +2,11 @@ package com.thread.sync;
 
 public class Counter {
     private int count;
-    public synchronized void incr(){
-        count ++;
+
+    public synchronized void incr() {
+        count++;
     }
+
     public synchronized int getCount() {
         return count;
     }
@@ -12,9 +14,9 @@ public class Counter {
     /**
      * 实例方法代码块 保护的是this
      */
-    public void incr2(){
+    public void incr2() {
         synchronized (this) {
-            count ++;
+            count++;
         }
     }
 }

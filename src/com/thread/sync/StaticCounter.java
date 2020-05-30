@@ -2,9 +2,11 @@ package com.thread.sync;
 
 public class StaticCounter {
     private static int count;
-    public static synchronized void incr(){
-        count ++;
+
+    public static synchronized void incr() {
+        count++;
     }
+
     public static synchronized int getCount() {
         return count;
     }
@@ -12,9 +14,9 @@ public class StaticCounter {
     /**
      * 静态方法代码块 保护的是类对象
      */
-    public static void incr2(){
+    public static void incr2() {
         synchronized (StaticCounter.class) {
-            count ++;
+            count++;
         }
     }
 }
