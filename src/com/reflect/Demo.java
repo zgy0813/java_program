@@ -1,4 +1,4 @@
-package com.reflect.base;
+package com.reflect;
 
 import java.util.Date;
 
