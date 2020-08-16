@@ -46,5 +46,8 @@ public class Demo {
             // 可能会抛出异常ClassNotFoundException
             e.printStackTrace();
         }
+
+
+        ClassLoader classLoader = clsDate.getClassLoader();
     }
 }
